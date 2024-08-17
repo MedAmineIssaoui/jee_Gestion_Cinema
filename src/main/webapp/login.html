@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    form {
+        width: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    legend {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    select {
+        height: 40px; /* Match input height */
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <form method="POST" action="AuthServlet">
+        <fieldset>
+            <legend>Login</legend>
+            <div>
+                <label>
+                    <span>Username</span>
+                    <input type="text" name="username">
+                </label>
+            </div>
+            <br>    
+            <div>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password">
+                </label>
+            </div>
+            <br>
+            <div>
+                <label>
+                    <span>User Type</span>
+                    <select name="userType">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </label>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="S'authentifier">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
